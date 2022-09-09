@@ -58,6 +58,7 @@ function aleatorio(min, max){
 function ataqueFuego(){
     ataqueJugador = 'FUEGO';
     ataqueAleatorioEnemigo();
+
 }
 
 function ataqueAgua(){
@@ -71,7 +72,7 @@ function ataqueTierra(){
 }
 
 
-function ataqueAleaotorioEnemigo(){
+function ataqueAleatorioEnemigo(){
     let ataqueAleaotorio = aleatorio(1,3);
 
     if (ataqueAleaotorio == 1) {
@@ -81,6 +82,11 @@ function ataqueAleaotorioEnemigo(){
     }else{
         ataqueEnemigo = 'TIERRA';
     }
+    crearMensaje();
+}
 
+function crearMensaje(){
+    let parrafo = document.createElement('p');
+    parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador +', las mascota del enemigo atacó con ' + ataqueEnemigo + '-PENDIENTE';
 }
 window.addEventListener('load', iniciarJuego);
