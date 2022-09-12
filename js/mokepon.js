@@ -101,6 +101,15 @@ function crearMensajeFinal(resultadoFinal){
     let parrafo = document.createElement('p');
     parrafo.innerHTML = resultadoFinal;
     seccionMensajes.appendChild(parrafo);
+
+    let btnFuego = document.getElementById('btn-fuego');
+    btnFuego.disabled = true;
+
+    let btnAgua = document.getElementById('btn-agua');
+    btnAgua.disabled = true;
+
+    let btnTierra = document.getElementById('btn-tierra');
+    btnTierra.disabled = true;
 }
 
 function combate(){
