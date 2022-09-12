@@ -16,6 +16,8 @@ function iniciarJuego(){
     let btnTierra = document.getElementById('btn-tierra');
     btnTierra.addEventListener('click', ataqueTierra);
 
+    let btnReiniciar = document.getElementById('btn-reiniciar');
+    btnReiniciar.addEventListener('click', reiniciarJuego);
     
 }
 
@@ -136,5 +138,9 @@ function revisarVidas(){
         crearMensajeFinal('LO SIENTO! PERDISTE :(');
 
     }
+}
+
+function reiniciarJuego(){
+    location.reload;
 }
 window.addEventListener('load', iniciarJuego);
