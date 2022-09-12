@@ -94,6 +94,13 @@ function crearMensaje(resultado){
     seccionMensajes.appendChild(parrafo);
 }
 
+function crearMensajeFinal(resultadoFinal){
+    let seccionMensajes = document.getElementById('mensajes');
+    let parrafo = document.createElement('p');
+    parrafo.innerHTML = resultadoFinal;
+    seccionMensajes.appendChild(parrafo);
+}
+
 function combate(){
     let vidasJugador=document.getElementById('vidas-jugador');
     let vidasEnemigo=document.getElementById('vidas-enemigo');
@@ -117,6 +124,17 @@ function combate(){
         crearMensaje('PERDISTE');
         vidasJugadorContador--;
         vidasJugador.innerHTML = vidasJugadorContador;
+    }
+
+    revisarVidas();
+}
+
+function revisarVidas(){
+    if (vidasEnemigoContador == 0) {
+        crearMensajeFinal('Felicitaciones! GANASTE :)');
+    }else if(vidasJugadorContador == 0){
+        crearMensajeFinal('LO SIENTO! PERDISTE :(');
+
     }
 }
 window.addEventListener('load', iniciarJuego);
