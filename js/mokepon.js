@@ -123,7 +123,7 @@ function crearMensajeFinal(resultadoFinal){
     btnTierra.disabled = true;
 
     let seccionReiniciar = document.getElementById('reiniciar');
-    seccionReiniciar.style.display = 'block';
+    seccionReiniciar.style.display = 'flex';
 }
 
 function combate(){
