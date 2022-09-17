@@ -28,7 +28,7 @@ function iniciarJuego(){
 
 function seleccionarMascotaJugador(){
     let seccionAtaque = document.getElementById('seleccionar-ataque');
-    seccionAtaque.style.display = 'block';
+    seccionAtaque.style.display = 'flex';
 
     let seccionMascota = document.getElementById('seleccionar-mascota');
     seccionMascota.style.display = 'none';
@@ -101,17 +101,28 @@ function ataqueAleatorioEnemigo(){
 }
 
 function crearMensaje(resultado){
-    let seccionMensajes = document.getElementById('mensajes');
-    let parrafo = document.createElement('p');
-    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}. ${resultado}`;
-    seccionMensajes.appendChild(parrafo);
+    let seccionMensajes = document.getElementById('resultado');
+    let ataqueDelJugador = document.getElementById('ataque-del-jugador');
+    let ataqueDelEnemigo = document.getElementById('ataque-del-enemigo');
+    
+    
+    let NuevoataqueDelJugador = document.createElement('p');
+    let NuevoataqueDelEnemigo = document.createElement('p');
+
+    seccionMensajes.innerHTML = resultado;
+    NuevoataqueDelJugador.innerHTML = ataqueJugador;
+    NuevoataqueDelEnemigo.innerHTML = ataqueEnemigo;
+    
+    
+    ataqueDelJugador.appendChild(NuevoataqueDelJugador);
+    ataqueDelEnemigo.appendChild(NuevoataqueDelEnemigo);
+
 }
 
 function crearMensajeFinal(resultadoFinal){
-    let seccionMensajes = document.getElementById('mensajes');
-    let parrafo = document.createElement('p');
-    parrafo.innerHTML = resultadoFinal;
-    seccionMensajes.appendChild(parrafo);
+    let seccionMensajes = document.getElementById('resultado');
+    seccionMensajes.innerHTML = resultadoFinal;
+    
 
     let btnFuego = document.getElementById('btn-fuego');
     btnFuego.disabled = true;

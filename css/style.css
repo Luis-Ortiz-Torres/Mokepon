@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +12,131 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     row-gap: 20px;
-    background: turquoise;
+    background: #FFCA03;
+}
+
+.titulo{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 80px;
+    
+}
+
+.subtitulo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: #FF5403;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 30px;
+}
+
+.tarjeta-mokepon{
+    width: 180px;
+    height: 120px;
+    background: #FFF323;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF5403;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.tarjeta-mokepon img{
+    width: 80px;
+}
+
+#btn-mascota, #btn-reiniciar{
+    width: 180px;
+    height: 60px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid #FF5403;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FF5403;
+    letter-spacing: 1px;
+}
+
+#btn-mascota:hover, #btn-reiniciar:hover{
+    color: #FFF323;
+    background: #FF5403;
+    border-color: #FFF323;
+}
+
+#seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    row-gap: 20px;
+    background: #FFCA03;
+}
+
+.ataques{
+    background: #FFF323;
+    color: #FF5403;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 2px solid #FF5403;
+    padding: 5px 30px;
+}
+
+#mensajes{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    background: #FFF323;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 20px 10px;
+}
+
+.container-ataques{
+    display: grid;
+    width: 50%;
+    grid-template-columns: minmax(20%,50%) minmax(20%, 50%);
+    justify-items: center;
+}
+
+.info-jugadores{
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#vidas-jugador, #vidas-enemigo{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 40px;
+    width: 50px;
+    background: #FFF323;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+input{
+    display: none;
+}
+
+input:checked+label{
+    border: 5px solid #FF5403;
+    transform: scale(1.15);
 }
