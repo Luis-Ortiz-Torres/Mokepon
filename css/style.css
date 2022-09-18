@@ -35,12 +35,13 @@
 }
 
 .tarjeta-mokepon{
-    width: 180px;
-    height: 120px;
+    width: 200px;
+    height: 180px;
     background: #FFF323;
     padding: 10px;
     border-radius: 20px;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     color: #FF5403;
@@ -49,7 +50,7 @@
 }
 
 .tarjeta-mokepon img{
-    width: 80px;
+    width: 150px;
 }
 
 #btn-mascota, #btn-reiniciar{
@@ -63,6 +64,7 @@
     font-weight: 500;
     color: #FF5403;
     letter-spacing: 1px;
+    margin-top: 20px;
 }
 
 #btn-mascota:hover, #btn-reiniciar:hover{
@@ -106,6 +108,7 @@
     font-weight: 600;
     border-radius: 20px;
     padding: 20px 10px;
+    color: #FF5403;
 }
 
 .container-ataques{
@@ -132,6 +135,28 @@
     text-align: center;
     border-radius: 50%;
 }
+
+#mascota-jugador, #mascota-enemigo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #FF5403;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#ataque-del-jugador, #ataque-del-enemigo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #FF5403;
+    text-align: center;
+    
+}
+
+
 input{
     display: none;
 }
@@ -139,4 +164,35 @@ input{
 input:checked+label{
     border: 5px solid #FF5403;
     transform: scale(1.15);
+}
+
+/***************** ESTILOS PARA MOVIL *************/
+
+@media screen and (max-width:767px) {
+    .tarjetas{
+        flex-direction: column;
+    }
+
+    .titulo{
+        font-size: 60px;
+    }
+
+    .subtitulo{
+        font-size: 25px;
+    }
+    
+    #seleccionar-mascota, #seleccionar-ataque{
+        padding: 10% 5%;
+    }
+
+    .elegir-ataque{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .container-ataques{
+        grid-gap: 100px;
+    }
+    
 }
