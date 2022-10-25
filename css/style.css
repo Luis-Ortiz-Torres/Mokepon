@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-#seleccionar-mascota{
+#seleccionar-mascota, #ver-mapa{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,6 +81,7 @@
     min-height: 100vh;
     row-gap: 20px;
     background: #FFCA03;
+    padding: 2% 0%;
 }
 
 .ataques{
@@ -95,12 +96,11 @@
 }
 
 #mensajes{
-    width: 300px;
+    width: 330px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 20px;
     background: #FFF323;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
@@ -157,6 +157,9 @@
 }
 
 
+#mapa{
+    border: #FF5403 2px solid;
+}
 input{
     display: none;
 }
