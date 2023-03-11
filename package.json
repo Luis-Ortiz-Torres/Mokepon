@@ -1,0 +1,25 @@
+{
+  "name": "mokepon",
+  "version": "1.0.0",
+  "description": "Juego de Mokepon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luis-Ortiz-Torres/Mokepon.git"
+  },
+  "keywords": [
+    "Javascript",
+    "html",
+    "css",
+    "node"
+  ],
+  "author": "Luis Ortiz Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luis-Ortiz-Torres/Mokepon/issues"
+  },
+  "homepage": "https://github.com/Luis-Ortiz-Torres/Mokepon#readme"
+}
